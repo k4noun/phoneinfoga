@@ -528,7 +528,8 @@
         "handlers.DryRunScannerInput": {
             "type": "object",
             "required": [
-                "number"
+                "number",
+                "options"
             ],
             "properties": {
                 "formats": {
@@ -539,6 +540,9 @@
                 },
                 "number": {
                     "type": "string"
+                },
+                "options": {
+                    "$ref": "#/definitions/remote.ScannerOptions"
                 }
             }
         },
@@ -567,7 +571,8 @@
         "handlers.RunScannerInput": {
             "type": "object",
             "required": [
-                "number"
+                "number",
+                "options"
             ],
             "properties": {
                 "formats": {
@@ -578,6 +583,9 @@
                 },
                 "number": {
                     "type": "string"
+                },
+                "options": {
+                    "$ref": "#/definitions/remote.ScannerOptions"
                 }
             }
         },
@@ -733,6 +741,10 @@
                     "type": "string"
                 }
             }
+        },
+        "remote.ScannerOptions": {
+            "type": "object",
+            "additionalProperties": true
         },
         "web.JSONResponse": {
             "type": "object",

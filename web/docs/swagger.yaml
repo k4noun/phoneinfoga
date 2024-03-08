@@ -47,8 +47,11 @@ definitions:
         type: array
       number:
         type: string
+      options:
+        $ref: '#/definitions/remote.ScannerOptions'
     required:
     - number
+    - options
     type: object
   handlers.DryRunScannerResponse:
     properties:
@@ -72,8 +75,11 @@ definitions:
         type: array
       number:
         type: string
+      options:
+        $ref: '#/definitions/remote.ScannerOptions'
     required:
     - number
+    - options
     type: object
   handlers.RunScannerResponse:
     properties:
@@ -174,6 +180,9 @@ definitions:
         type: string
       zip_code:
         type: string
+    type: object
+  remote.ScannerOptions:
+    additionalProperties: true
     type: object
   web.JSONResponse:
     properties:
